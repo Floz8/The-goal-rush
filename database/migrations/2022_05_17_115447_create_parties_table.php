@@ -16,6 +16,17 @@ return new class extends Migration
         Schema::create('parties', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('plats_id');
+            $table->foreign('home_team')->references('id')->on('teams');
+            $table->foreign('away_team')->references('id')->on('teams');
+            $table->integer('score_home_team');
+            $table->integer('score_away_team');
+            $table->float("home_team_rating");
+            $table->float("away_team_rating");
+            $table->float("draft_rating");
+            $table->integer("result");
+            $table->date("date");
+
         });
     }
 

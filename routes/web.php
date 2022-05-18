@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use app\Http\Controllers\LogoutController;
+use App\Http\Controllers\PartiesController;
+use app\Models\Parties;
 
 
 /*
@@ -18,10 +20,17 @@ use app\Http\Controllers\LogoutController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/match', function () {
+    return view('match');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
+Route::get('/match','App\Http\Controllers\PartiesController@listMatchs', function () {
+    return view('match');
+})->middleware(['auth'])->name('dashboard');
+
 
 Route::group(['middleware' => ['auth']], function() {
     /**
@@ -31,3 +40,16 @@ Route::group(['middleware' => ['auth']], function() {
  });
 
 require __DIR__.'/auth.php';
+/*
+Route::get('dashboard', function () {
+    $parties = Parties::all();
+    return view('dashboard', ['match' => $parties]);
+  });
+/*
+Route::get('/matchs', 'PartiesController@list');
+Route::get('/matchs/{match}', 'PartiesController@list');
+/*
+Route::view('AjouterJeu', 'Jeux/AjouterJeu');
+Route::get('/jeux/{jeu}', 'JeuxController@show');
+Route::post('jeux', 'JeuxController@store');
+*/
