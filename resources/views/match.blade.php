@@ -14,7 +14,7 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <h1> Liste des matchs</h1>
                     @foreach($parties as $party)
-                    <h3><a href="/matchs/{{ $party->id }}">{{ $party->home_team}} vs {{ $party->away_team}}   </a> </h3> 
+                    <h3><a href="/match/{{ $party->id }}">{{ $party->home_team}} vs {{ $party->away_team}}   </a> </h3> 
                     @endforeach
 
                 </div>

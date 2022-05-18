@@ -15,6 +15,10 @@ class PartiesController extends Controller
         ]);
        }
 
+       public function show($parties){
+        $parties = Parties::find($parties);
+        return view('match.show', compact('parties'));
+    }
         
     
 }

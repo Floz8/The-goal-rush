@@ -31,6 +31,8 @@ Route::get('/match','App\Http\Controllers\PartiesController@listMatchs', functio
     return view('match');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/match/{parties}', 'App\Http\Controllers\PartiesController@show', 'App\Http\Controllers\PartiesController@list');
+
 
 Route::group(['middleware' => ['auth']], function() {
     /**
