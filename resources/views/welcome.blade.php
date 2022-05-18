@@ -32,6 +32,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="login">Connexion</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="register">Créer un compte</a>
+        </li>
       </ul>
     </div>
   </div>

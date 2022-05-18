@@ -4,7 +4,7 @@
  @csrf
  <div class="form-group">
  
-<label for="exampleFormControlSelect1">test</label>
+<label for="exampleFormControlSelect1">TODO</label>
 
     <select class="form-control" id="exampleFormControlSelect1" name="note"> 
       <option>Victoire home</option>
