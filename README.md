@@ -2,7 +2,7 @@
 
 ## Projet The Goal Rush
 
-Projet réalisé avec Laravel.
+Projet réalisé avec Laravel
 
 Suivi de qualité du code avec Sonarcloud, tests avec PHPunit
 Version de PHP: 8.0.2
@@ -10,11 +10,15 @@ Version de PHP: 8.0.2
 ## Structure du projet
 
 Ce projet est construite sur une architecture MVC
+
 -Les modèles se trouvent dans app/Models
+
 -Les vues se trouvent dans ressource/view et ont l'extension .blade.php
+
 -Les controlleurs se trouvent dans app/http/controllers
 
 Les migrations de la base de données se trouvent dans database/migrations
+Il est nécessaire de faire un composer install
 
 ## License
 
